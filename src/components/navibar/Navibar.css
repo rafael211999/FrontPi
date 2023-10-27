@@ -1,0 +1,44 @@
+.Nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 15px;
+}
+
+.Button a {
+  background-color: black;
+  color: chocolate;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+}
+
+.Button a:hover {
+  color: aqua;
+}
+
+.MyLogo {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .Button a {
+    background-color: black;
+    color: chocolate;
+    padding: 15px;
+    font-family: "Courier New", Courier, monospace;
+    text-decoration: none;
+    display: flex;
+  }
+
+  .Nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 15px;
+  }
+}
