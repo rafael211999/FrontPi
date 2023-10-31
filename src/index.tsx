@@ -1,52 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from './App';
 import reportWebVitals from "./reportWebVitals";
-// import Mensagem from './components/mensagem/Mensagem';
-// import UserIput from './components/userInput/UserInput';
-import Navibar from "./components/navibar/Navibar";
-import Card from "./components/card/Card";
-import Produtos from "./components/cardProdutos/Produtos";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./components/routes/Home";
-import Products from "./components/routes/Products";
-import Sales from "./components/routes/Sales";
-import User from "./components/routes/User";
-import App from "./App";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/home",
-        element: <Home />,
-      },
-      {
-        path: "/user",
-        element: <User />,
-      },
-      {
-        path: "/products",
-        element: <Products />,
-      },
-      {
-        path: "/sales",
-        element: <Sales />,
-      },
-    ],
-  },
-]);
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home/Home";
+import Products from "./components/products/Products";
+import Sales from "./components/sales/Sales";
+import User from "./components/user/User";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter basename="/pi">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/sales" element={<Sales />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

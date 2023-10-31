@@ -1,19 +1,15 @@
 import React from "react";
 import "./Navibar.css";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import logo from "../../imagem/R.gif";
+import { Link } from "react-router-dom";
+
 
 function Navibar() {
   return (
     <div>
-      <div className="MyLogo">
-        <Link to="/home" target="_blank" rel="noopener noreferrer">
-          <img src={logo} alt="Logo" />
-        </Link>
-      </div>
+     
       <div className="Nav">
         <div className="Button">
-          <Link to="/home" target="_blank" rel="noopener noreferrer">
+          <Link to="/" target="_blank" rel="noopener noreferrer">
             Home
           </Link>
         </div>
@@ -24,7 +20,7 @@ function Navibar() {
         </div>
         <div className="Button">
           <Link to="/products" target="_blank" rel="noopener noreferrer">
-            Cadastro produtos
+            Cadastro de produtos
           </Link>
         </div>
         <div className="Button">
