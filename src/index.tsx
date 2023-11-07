@@ -16,7 +16,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/pi">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/products" element={<Products />} />
         <Route path="/sales" element={<Sales />} />

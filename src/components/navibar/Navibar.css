@@ -7,7 +7,7 @@
   padding: 15px;
 }
 
-.Button a {
+.Button a{
   background-color: black;
   color: chocolate;
   padding: 15px;
@@ -19,6 +19,9 @@
   color: aqua;
 }
 
+.Link {
+  pointer-events: none;
+}
 .MyLogo {
   display: flex;
 }
@@ -32,6 +35,7 @@
     text-decoration: none;
     display: flex;
   }
+
 
   .Nav {
     display: flex;

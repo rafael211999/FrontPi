@@ -29,7 +29,7 @@ async function getProducts(divId: HTMLDivElement) {
       teste += `
 
       <div class="Container">
-      <img src=${dados.quantidade} alt="Aqui é minha umagem" class="Img" />
+      <img src=${dados.quantidade} alt="Aqui é minha imagem" class="Img" />
       <div class="Descricao">
       <div class="TituloProduto">Nome: ${dados.name} </div>
       <div class="SubTitulo">Anime: ${dados.fabrica}</div>

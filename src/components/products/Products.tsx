@@ -30,6 +30,8 @@ function Products() {
             rel="noopener noreferrer"
           />
         </div>
+
+        <button id="cadastrarProduto" className="MyButton"> Cadastrar </button>
       </div>
     </>
   );

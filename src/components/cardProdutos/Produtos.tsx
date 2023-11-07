@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Produtos.css";
-import getProducts from "../../products/Products";
+import getProducts from "../../services/Products";
 
 function Produtos() {
   useEffect(() => {
