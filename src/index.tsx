@@ -8,6 +8,7 @@ import Home from "./components/home/Home";
 import Products from "./components/products/Products";
 import Sales from "./components/sales/Sales";
 import User from "./components/user/User";
+import Error from "./components/erro/Error";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -16,10 +17,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter basename="/pi">
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/user" element={<User />} />
         <Route path="/products" element={<Products />} />
         <Route path="/sales" element={<Sales />} />
+        <Route path="*" element={<Error/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

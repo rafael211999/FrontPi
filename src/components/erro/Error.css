@@ -1,0 +1,11 @@
+.ErroTitulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ErroSubTi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

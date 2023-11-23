@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import imagem from "../../imagem/OIP.png";
+import imagem from "../../imagem/R.gif";
 
 function Card() {
   return (

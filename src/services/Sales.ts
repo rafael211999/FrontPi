@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const Url = "http://localhost:8080/api/sales";
+const Url = "http://localhost:9000/api/sales";
 
 async function getSales(divId: HTMLDivElement) {
     await axios.get(Url).then((response) => {

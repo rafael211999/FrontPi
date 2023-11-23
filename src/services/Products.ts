@@ -3,7 +3,7 @@ import axios from "axios";
 import imagem from "../../imagem/OIP.png";
 import "../components/cardProdutos/Produtos.css"
 
-const Url = "http://localhost:8080/api/products";
+const Url = "http://localhost:9000/api/products";
 
 // var imagemLuffi = "https://th.bing.com/th/id/R.fedb2e98fbca74375274d15379b8532e?rik=rjV%2fTPYpBiuL%2fw&riu=http%3a%2f%2ficongal.com%2fgallery%2fimage%2f403828%2fluffys_flag_manga_skull_chopper_hat_bones_dead.png&ehk=wm41upgAtqfbJ6oO724bGfS9Tw0Z989Grd%2boKVCVLEk%3d&risl=&pid=ImgRaw&r=0"
 
@@ -70,7 +70,7 @@ async function productsDataPost() {
   };
 
   await axios
-    .post("http://localhost:8080/api/products", userJson, {
+    .post("http://localhost:9000/api/products", userJson, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",

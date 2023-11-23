@@ -12,7 +12,7 @@ async function userDataGet() {
   var userCpfInput =
     (document.getElementById("userCpf") as HTMLInputElement) || null;
 
-  const userUrl = "http://localhost:8080/api/users";
+  const userUrl = "http://localhost:9000/api/users";
 
   var userDataJason = {
     name: userNameInput.value.toString(),
@@ -21,21 +21,7 @@ async function userDataGet() {
     cpf: userCpfInput.value.toString(),
   };
 
-  /*   newDiv.innerHTML = `<div> 
-    <div> 
-    Nome: ${userNameInput.value}</br>
-    </div> 
-    <div>
-    Sobrenome: ${userLastNameInput.value}</br>
-    </div>
-    <div> 
-    Email: ${userEmailInput.value}</br>
-    </div>
-    <div> 
-    Cpf: ${userCpfInput.value}</br>
-    </div> 
-    </div>`;
- */
+  
 
   await axios.get(userUrl).then((response) => {
     // O Record serve para poder permitir que a gente traga a chave valor do JSon e coloque no array
@@ -77,7 +63,7 @@ async function userDataGet() {
 }
 
 // async function userDataPost() {
-//   const userPostUrl = "http://localhost:8080/api/users";
+//   const userPostUrl = "http://localhost:9000/api/users";
 //   var userJson = {
 //     "name": "Camila",
 //     "last_name": "maluca",
@@ -106,7 +92,7 @@ async function userDataPost() {
   };
 
   await axios
-    .post("http://localhost:8080/api/users", userJson, {
+    .post("http://localhost:9000/api/users", userJson, {
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",

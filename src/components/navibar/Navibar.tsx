@@ -39,7 +39,7 @@ function Navibar() {
     <div>
       <div className="Nav">
         <div className="Button">
-          <Link to="/home" id="home" rel="noopener noreferrer">
+          <Link to="/" id="home" rel="noopener noreferrer">
             Home
           </Link>
         </div>

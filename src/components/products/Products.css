@@ -1,7 +1,6 @@
 .ContainerInput {
   display: flex;
   flex-direction: column;
-  /* background-color: aqua; */
   padding: 2% 0% 2% 0%;
   align-items: center;
 }
