@@ -41,10 +41,6 @@ function Products() {
 
 
 
-
-
-
-
   return (
     <>
       <Navibar />
