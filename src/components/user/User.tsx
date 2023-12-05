@@ -35,6 +35,7 @@ function User() {
       })
       .catch((error) => {
         console.log(error);
+        alert("Não foi possível cadastrar o usuário, por favor tente novamente mais tarde!!!")
       });
   }
 

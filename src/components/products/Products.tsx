@@ -32,9 +32,11 @@ function Products() {
       })
       .then((response) => {
         console.log(response);
+        alert("Dados do produto cadastrados com sucesso")
       })
       .catch((error) => {
         console.log(error);
+        alert("Não foi possível cadastrar os dados do seu produto, por favor tente novamente mais tarde!!!")
       });
   }
   

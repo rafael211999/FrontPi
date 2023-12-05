@@ -15,10 +15,11 @@
 }
 
 .Children input {
-  padding: 1vw 20vw 1vw 1vw;
+  padding: 1vw 1vw 1vw 1vw;
   border-radius: 15px;
   background-color: white;
   margin: 5%;
+  width: 30vw;
 }
 
 .MyButton{
