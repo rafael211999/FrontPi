@@ -1,6 +1,8 @@
 import React from "react";
 import Navibar from "../navibar/Navibar";
 import axios from "axios";
+import "./User.css";
+import { Link } from "react-router-dom";
 
 function User() {
 
@@ -39,7 +41,7 @@ function User() {
       });
   }
 
-
+ 
 
 
 
@@ -83,7 +85,9 @@ function User() {
           />
         </div>
 
-        <button id="cadastrarProduto" className="MyButton" onClick={userDataPost}> Cadastrar </button>
+        <button id="cadastrarUser" className="MyButton" onClick={userDataPost}> Cadastrar </button>
+        <Link  to={"/listarUsuario"}><button id="listarUsers" className="ListarBtn" >Listar usuários</button></Link>
+       
       </div>
     </>
   );

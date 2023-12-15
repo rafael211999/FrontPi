@@ -3,6 +3,7 @@ import "./Products.css";
 import Navibar from "../navibar/Navibar";
 import productsDataPost from "../../services/Products"
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Products() {
   
@@ -75,6 +76,7 @@ function Products() {
         </div>
 
         <button id="cadastrarProduto" className="MyButton" onClick={productsDataPost} > Cadastrar </button>
+        <Link  to={"/listarProdutos"}><button id="listarSales" className="ListarBtn" >Listar vendas</button></Link>
       </div>
     </>
   );

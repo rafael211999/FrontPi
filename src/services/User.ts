@@ -1,19 +1,19 @@
 import React from "react";
 import axios from "axios";
 import imagem from "../../imagem/OIP.png";
-import "../components/cardSales/CardSales.css"
+import "../components/cardUser/CardUser.css"
 
 
 
 
-const Url = "http://localhost:9000/api/sales";
+const Url = "http://localhost:9000/api/users";
 
-async function getSales(divId: HTMLDivElement) {
+async function getUsers(divId: HTMLDivElement) {
     await axios.get(Url).then((response) => {
 
         const dataUsers: Record<
             string,
-            { usuario: string; produto: string; valor: GLfloat ; venda_final: boolean; desconto : GLfloat; venda: string }
+            { name: string; last_name: string; email: string; cpf: string }
         > = response.data;
 
         const userArray = Object.entries(dataUsers).map(([key, value]) => ({
@@ -29,42 +29,32 @@ async function getSales(divId: HTMLDivElement) {
 
             <div class="Children">
                 <div
-                    class="divUser"
+                    class="divName"
                     type="text"
                     rel="noopener noreferrer"
-                >Usuario: ${dados.usuario}  </div>
+                    id="sName"
+                >Nome: ${dados.name}  </div>
 
                 <div
-                    class="divProduto"
+                    class="divLastName"
                     type="text"
                     rel="noopener noreferrer"
-                >Produto: ${dados.produto} </div>
+                    id="sSobrenome"
+                >Sobrenome: ${dados.last_name} </div>
 
                 <div
-                    class="divValor"
+                    class="divEmail"
                     type="text"
                     rel="noopener noreferrer"
-                  
-                >Valor: ${dados.valor}</div>
+                    id="sEmail"
+                >Email: ${dados.email}</div>
 
                 <div
-                    class="divVendaFinal"
+                    class="divCpf"
                     type="text"
                     rel="noopener noreferrer"
                     id="sCpf"
-                >Venda final: ${dados.venda_final} </div>
-                <div
-                    class="divDesconto"
-                    type="text"
-                    rel="noopener noreferrer"
-                    id="sCpf"
-                >Desconto: ${dados.desconto} </div>
-                <div
-                    class="divVenda"
-                    type="text"
-                    rel="noopener noreferrer"
-                    id="sCpf"
-                >Numero da venda: ${dados.venda} </div>
+                >Cpf: ${dados.cpf} </div>
             </div>
         
 
@@ -80,4 +70,4 @@ async function getSales(divId: HTMLDivElement) {
     });
 }
 
-export default { getSales };
+export default { getUsers };

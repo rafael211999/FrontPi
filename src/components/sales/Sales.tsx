@@ -1,6 +1,7 @@
 import React from "react";
 import Navibar from "../navibar/Navibar";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Sales() {
 
@@ -15,7 +16,7 @@ function Sales() {
     var vendaFinal = (document.getElementById("vFinal") as HTMLInputElement) || null;
     var desconto = (document.getElementById("desconto") as HTMLInputElement) || null;
     var numeroVenda = (document.getElementById("numVenda") as HTMLInputElement) || null;
-    
+
 
 
     const salesJson = {
@@ -26,7 +27,7 @@ function Sales() {
       desconto: desconto.value.toString(),
       venda: numeroVenda.value.toString(),
     };
-  
+
     await axios
       .post("http://localhost:9000/api/sales", salesJson, {
         withCredentials: true,
@@ -101,9 +102,10 @@ function Sales() {
         </div>
 
         <button id="cadastrarProduto" onClick={salesDataPost} className="MyButton">
-          {" "}
-          Cadastrar{" "}
+          Cadastrar
         </button>
+
+        <Link  to={"/listarSales"}><button id="listarSales" className="ListarBtn" >Listar vendas</button></Link>
       </div>
     </>
   );

@@ -22,7 +22,15 @@
   width: 30vw;
 }
 
-.MyButton{
+.MyButton {
+  padding: 1vw;
+  border-radius: 25px;
+  margin: 15px;
+  background-color: black;
+  color: tomato;
+}
+
+.ListarBtn {
   padding: 1vw;
   border-radius: 25px;
   margin: 15px;

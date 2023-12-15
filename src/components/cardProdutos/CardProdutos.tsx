@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import "./Produtos.css";
+import "./CardProdutos.css";
 import getProducts from "../../services/Products";
 
-function Produtos() {
+function CardProdutos() {
   useEffect(() => {
     var divId = (document.getElementById("newDiv") as HTMLDivElement) || null;
     getProducts.getProducts(divId);
   }, []);
 
-  return <div id="newDiv" className="PrincipalDiv"></div>;
+  return <div id="newDiv" className="renderDiv"></div>;
 }
 
-export default Produtos;
+export default CardProdutos;
