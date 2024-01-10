@@ -13,7 +13,7 @@ async function getSales(divId: HTMLDivElement) {
 
         const dataUsers: Record<
             string,
-            { usuario: string; produto: string; valor: GLfloat ; venda_final: boolean; desconto : GLfloat; venda: string }
+            { usuario: string; produto: string; valor: GLfloat ; venda_final: string; desconto : GLfloat; venda: string }
         > = response.data;
 
         const userArray = Object.entries(dataUsers).map(([key, value]) => ({

@@ -10,6 +10,7 @@ const Url = "http://localhost:9000/api/users";
 
 async function getUsers(divId: HTMLDivElement) {
     await axios.get(Url).then((response) => {
+        console.log("Aqui está a minha response " + response.data.name)
 
         const dataUsers: Record<
             string,
@@ -22,11 +23,11 @@ async function getUsers(divId: HTMLDivElement) {
         }));
 
         var myDiv = "";
-        userArray.forEach((dados) => {
+
+
+        userArray.map((dados) => {
 
             myDiv += `
-      
-
             <div class="Children">
                 <div
                     class="divName"
@@ -59,8 +60,6 @@ async function getUsers(divId: HTMLDivElement) {
         
 
     `;
-
-            console.log("Aqui está os meus dados", dados)
         });
 
         divId.innerHTML = myDiv;

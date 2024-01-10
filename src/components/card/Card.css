@@ -1,18 +1,43 @@
 
 
-.MyImage {
+.Container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 5% 5% 5% 5%;
 }
 
 .Titulo {
-  color: rgb(71, 83, 255);
+  display: flex;
+  color: rgb(100, 98, 98);
   font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  justify-content: center;
+  font-weight: bold;
+  
 }
 
-.Valor {
+.Apresentacao {
   display: flex;
   font-family: "Courier New", Courier, monospace;
+  margin: 1vw;
+  font-weight: bolder;
+  color: rgb(100, 98, 98);
+}
+
+.Informacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+  color:  rgb(100, 98, 98);
+  max-width: 40vw;
+  margin: 0 0 1vw 0;
+}
+
+.MyImage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

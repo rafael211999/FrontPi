@@ -1,5 +1,6 @@
 body {
-    background-color: rgba(255, 0, 0);
+    background-color: rgb(214, 214, 214);
+    color: rgb(100, 98, 98);
 }
 
 .renderDiv {

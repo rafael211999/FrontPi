@@ -4,7 +4,7 @@ import imagem from "../../imagem/OIP.png";
 import "../components/cardProdutos/CardProdutos.css"
 
 const Url = "http://localhost:9000/api/products";
-
+var teste = "";
 
 async function getProducts(divId: HTMLDivElement) {
   await axios.get(Url).then((response) => {
@@ -28,7 +28,7 @@ async function getProducts(divId: HTMLDivElement) {
           class="divName"
           type="text"
           rel="noopener noreferrer"
-      >Nome: ${dados.name}  </div>
+      >Nome: ${dados.name}</div>
 
       <div
           class="divFabrica"
@@ -41,6 +41,7 @@ async function getProducts(divId: HTMLDivElement) {
           type="text"
           rel="noopener noreferrer"
       >Quantidade: ${dados.quantidade}</div>
+      </div>
     `;
 
     });
@@ -75,4 +76,4 @@ async function getProducts(divId: HTMLDivElement) {
 //     });
 // }
 
-export default { getProducts};
+export default {getProducts};
